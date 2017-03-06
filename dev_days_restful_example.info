@@ -1,0 +1,6 @@
+name = DevDays RESTful example
+description = Holds example of RESTful for DevDays
+core = 7.x
+
+description[] = restful
+description[] = restful_token_auth
