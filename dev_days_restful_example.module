@@ -1,10 +1,10 @@
 <?php
-
 /**
  * @file
- *
- * dev_days_restful_example.module
+ * Code for the DevDays RESTful example feature.
  */
+
+include_once 'dev_days_restful_example.features.inc';
 
 /**
  * Implements hook_ctools_plugin_directory().
