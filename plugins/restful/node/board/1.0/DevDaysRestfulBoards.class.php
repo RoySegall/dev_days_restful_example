@@ -22,7 +22,7 @@ class DevDaysRestfulBoards extends RestfulEntityBaseNode {
       'callback' => [$this, 'DummyField'],
     ];
 
-    $fields['custom_author'] = [
+    $fields['author'] = [
       'property' => 'author',
       'process_callbacks' => [
         [$this, 'CustomAuthor'],

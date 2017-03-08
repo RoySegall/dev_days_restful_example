@@ -19,3 +19,5 @@ features[field_instance][] = node-board_messages-field_board_reference
 
 features[node][] = board
 features[node][] = board_messages
+
+files[] = include/AccountProcessTrait.php
