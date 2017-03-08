@@ -14,3 +14,41 @@ function dev_days_restful_example_ctools_plugin_directory($module, $plugin) {
     return 'plugins/' . $plugin;
   }
 }
+
+/**
+ * Implements hook_menu().
+ */
+function dev_days_restful_example_menu() {
+  $items = [];
+
+  $items['admin/config/development/dev-days-restful-example'] = [
+    'title' => 'Dev Days restful example configuration',
+    'description' => 'Setting the composer credential keys',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => ['dev_days_restful_example_pusher_settings'],
+    'access arguments' => ['dev_days_restful_example_manage_pusher'],
+  ];
+
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function dev_days_restful_example_permission() {
+  return [
+    'dev days restful example manager pusher' => [
+      'title' => t('DevDays restful example manager pusher'),
+    ],
+  ];
+}
+
+/**
+ * Form callback; Setting up pusher settings.
+ */
+function dev_days_restful_example_pusher_settings($form, $form_state) {
+
+  $form = [];
+
+  return system_settings_form($form);
+}
