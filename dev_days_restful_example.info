@@ -13,6 +13,7 @@ features[features_api][] = api:2
 
 features[field_base][] = body
 features[field_base][] = field_board_reference
+
 features[field_instance][] = node-board-body
 features[field_instance][] = node-board_messages-body
 features[field_instance][] = node-board_messages-field_board_reference

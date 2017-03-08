@@ -31,6 +31,17 @@ class DevDaysRestfulBoardMessages extends RestfulEntityBaseNode {
       ],
     ];
 
+    $fields['board'] = [
+      'property' => 'field_board_reference',
+      'resource' => array(
+        // The name of the bundle.
+        'board' => array(
+          // The name of the handler.
+          'name' => 'boards',
+        ),
+      ),
+    ];
+
     return $fields;
   }
 
