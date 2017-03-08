@@ -7,7 +7,7 @@
 
 class DevDaysRestfulBoardMessages extends RestfulEntityBaseNode {
 
-  use AccountProcessTrait;
+  use DevDaysRestfulExampleTrait;
 
   /**
    * {@inheritdoc}

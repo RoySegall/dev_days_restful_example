@@ -5,7 +5,7 @@
  * Contains AccountProcessTrait.
  */
 
-trait AccountProcessTrait {
+trait DevDaysRestfulExampleTrait {
 
   /**
    * Return a custom author formatting.
@@ -23,6 +23,20 @@ trait AccountProcessTrait {
     $author = $this->getAccount();
 
     return $author->uid == $account->uid ? t('You') : $account->name;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function createEntity() {
+    $return = parent::createEntity();
+
+    // Extract the entity from the array.
+    $entity = reset($return);
+    dev_days_restful_example_push($this->getPluginKey('bundle'), 'create', $entity);
+
+    // Return stuff like before.
+    return $return;
   }
 
 }
