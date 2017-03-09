@@ -15,6 +15,10 @@ class DevDaysRestfulExampleBoardValidator extends EntityValidateBase {
 
     $public_fields['title']['validators'][] = array($this, 'TitleLengthValidation');
 
+    $public_fields['body'] = [
+      'required' => TRUE,
+    ];
+
     return $public_fields;
   }
 
