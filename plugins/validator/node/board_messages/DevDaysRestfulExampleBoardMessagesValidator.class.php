@@ -7,6 +7,8 @@
 
 class DevDaysRestfulExampleBoardMessagesValidator extends EntityValidateBase {
 
+  use DevDaysRestfulExampleValidatorTrait;
+
   /**
    * Overrides EntityValidateBase::publicFieldsInfo().
    */
@@ -17,6 +19,9 @@ class DevDaysRestfulExampleBoardMessagesValidator extends EntityValidateBase {
 
     $public_fields['body'] = [
       'required' => TRUE,
+      'validators' => [
+        [$this, 'TitleLengthValidation'],
+      ]
     ];
 
     $public_fields['field_board_reference'] = [

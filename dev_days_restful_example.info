@@ -24,3 +24,4 @@ features[node][] = board
 features[node][] = board_messages
 
 files[] = include/DevDaysRestfulExampleTrait.php
+files[] = include/DevDaysRestfulExampleValidatorTrait.php
