@@ -21,7 +21,7 @@ class DevDaysRestfulExampleBoardMessagesValidator extends EntityValidateBase {
       'required' => TRUE,
       'validators' => [
         [$this, 'TitleLengthValidation'],
-      ]
+      ],
     ];
 
     $public_fields['field_board_reference'] = [
